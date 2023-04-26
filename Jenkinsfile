@@ -19,5 +19,11 @@ pipeline {
 		sh 'mvn package'
 	   }
 	}
+	stage('Deploying Artifcat')
+	   steps {
+		sh 'export ANSIBLE_HOST_KEY_CHECKING=False && ansible-playbook --private-key=/home/ubuntu/.ssh/testing.pem -i host_inventory deploy-artifact.yml'
+	  }
+	}
+
      }
 }
