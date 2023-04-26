@@ -32,7 +32,7 @@ pipeline {
 	}
 	stage ('Analyzing Code Quality') {
 	   steps {
-	      sh '/opt/sonar-scanner/bin/sonar-scanner -Dsonar.projectKey=java-springboot-sample-app -Dsonar.organization=Saurabh Panth -Dsonar.qualitygate.wait=true -Dsonar.qualitygate.timeout=300 -Dsonar.sources=src/main/java/ -Dsonar.java.binaries=target/classes -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=f3994bf2fea7d575bd95a86459a3db0a6097825f'
+	      sh '/opt/sonar-scanner/bin/sonar-scanner -Dsonar.projectKey=java-springboot-sample-app -Dsonar.organization=saurabhpanth26 -Dsonar.qualitygate.wait=true -Dsonar.qualitygate.timeout=300 -Dsonar.sources=src/main/java/ -Dsonar.java.binaries=target/classes -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=f3994bf2fea7d575bd95a86459a3db0a6097825f'
 	  }
        }
 	stage('Deploying Artifcat'){
